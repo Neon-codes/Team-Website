@@ -103,8 +103,6 @@ a {
   overflow-x: auto;
 }
 
-.cases::-webkit-scrollbar {
-}
 .cases::-webkit-scrollbar-thumb {
   background: white;
 }
