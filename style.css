@@ -13,7 +13,7 @@ html, body {
 
 body {
     background: #111;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .nav-inner {
