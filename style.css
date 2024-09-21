@@ -1,30 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilroy , sans-serif;
+    font-family: gilroy, sans-serif;
     color: white;
 }
-html,body{
+
+html, body {
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     background: #111;
+    overflow-x: hidden;
 }
-.nav-inner{
+
+.nav-inner {
     display: flex;
     justify-content: flex-start;
     gap: 12.3vw;
     padding: 1vw 2vw;
-    width: 40vw;
-    min-width: 500px;
 }
-.links{
+
+.links {
     display: flex;
     gap: 1vw;
 }
-nav > .placeholder{
+
+nav > .placeholder {
     width: 40vw;
     height: 60vh;
     position: absolute;
@@ -32,79 +36,95 @@ nav > .placeholder{
     left: 50%;
     z-index: -1;
 }
-nav{
+
+nav {
     display: flex;
     gap: 7vw;
+    padding: 20px;
 }
-a{
+
+nav a {
     text-decoration: none;
+    /* display: none; */
+    padding: 0 2px;
+    font-size: 15px;
+    gap: 84px;
 }
-.placeholder{
-    background: salmon;
+
+.placeholder {
+    background: url(bg.jpg);
+    background-size: cover;
     width: 20px;
     height: 20px;
     text-align: center;
 }
-.hero .right{
+
+.hero .right {
     font-size: 5vw;
     position: relative;
     margin-top: 3vw;
-  
     width: 85%;
     margin-left: auto;
 }
-.case-studies{
+
+.case-studies {
     width: 85%;
     margin-top: 10vw;
     margin-bottom: 5vw;
-    margin-left: auto;
+    margin: auto;
 }
-.case-studies h1{
+
+.case-studies h1 {
     font-size: 3vw;
     margin-bottom: 3vw;
 }
-.case .placeholder{
+
+.case .placeholder {
     width: 50vw;
     height: 30vw;
 }
-.cases{
+
+.cases {
     display: flex;
     gap: 10vw;
-    overflow-x: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
+.cases::-webkit-scrollbar {
+    display: none;
 }
-.cases::-webkit-scrollbar{
-    
-}
-.cases::-webkit-scrollbar-thumb{
-    background: white;
-    
-}
-.case{
+
+.case {
     flex-shrink: 0;
 }
-.case h3{
+
+.case h3 {
     color: #777;
     font-size: 0.7vw;
     margin-bottom: 0.6vw;
 }
-.lists{
+
+.lists {
     width: 85%;
-    margin-left: auto;
-    
+    margin: auto;
 }
-.lists h1{
+
+.lists h1 {
     font-size: 1.4vw;
 }
-.lists>h1{
+
+.lists > h1 {
     font-size: 3vw;
 }
-.list-cont{
+
+.list-cont {
     display: flex;
     flex-direction: column;
     margin-top: 5vw;
 }
-.list{
+
+.list {
     display: flex;
     border-bottom: 2px solid #777;
     height: 12vh;
@@ -112,59 +132,72 @@ a{
     justify-content: space-between;
     padding: 2vw 0;
 }
-.list h1{
+
+.list h1 {
     width: 100%;
 }
-.list svg{
+
+.list svg {
     width: 5%;
 }
-.list:nth-child(1){
+
+.list:nth-child(1) {
     border-top: 2px solid #777;
 }
-section.placeholder{
+
+section.placeholder {
     width: 99.5vw;
-    
+    background: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
     height: 40vh;
     margin-top: 10vh;
 }
-.years{
+
+.years {
     width: 85%;
-    margin-left: auto;
+    margin: auto;
     display: flex;
     justify-content: start;
     gap: 5vw;
     margin-top: 10vh;
 }
-.years h1{
+
+.years h1 {
     font-size: 5vw;
     line-height: 1;
 }
-.years h2{
+
+.years h2 {
     font-size: 1.7vw;
     line-height: 0.6;
-
 }
-.years p{
+
+.years p {
     font-size: 2vw;
     line-height: 1.3;
 }
-.form{
+
+.form {
     width: 85%;
-    margin-left: auto;
+    margin: auto;
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
-.form h1{
+
+.form h1 {
     font-size: 3vw;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 3vw;
     margin-top: 6vw;
 }
-.form input{
+
+.form input {
     background: transparent;
     border: none;
     border-bottom: 1px solid #777;
@@ -172,20 +205,28 @@ form{
     padding: 2vh 0;
     outline: none;
     font-size: 1.5vw;
+    transition: all 0.3s ease;
 }
-.form button{
+
+.form input:focus {
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.form button {
     align-self: start;
     background: none;
     border: none;
     font-size: 2vw;
     width: 20%;
-    
 }
-button svg{
+
+button svg {
     width: 3vw;
     margin-bottom: -1vw;
 }
-footer{
+
+footer {
     width: 99vw;
     margin: auto;
     display: flex;
@@ -193,18 +234,63 @@ footer{
     padding: 2vw 3vw;
     background: #0e0e0e;
 }
-footer .left{
+
+footer .left {
     display: flex;
     gap: 1vw;
 }
-footer .links_right{
+
+footer .links_right {
     font-size: 0.6vw;
     display: flex;
     flex-direction: column;
     gap: 0.3vw;
 }
-.links_right h3{
+
+.links_right h3 {
     color: #888;
     text-align: end;
+}
 
+@media (max-width: 768px) {
+    .nav-inner {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .hero .right {
+        font-size: 8vw;
+    }
+
+    .case-studies h1, .form h1 {
+        font-size: 5vw;
+    }
+    nav> .placeholder{
+        height:60vw;
+    }
+    .case .placeholder {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .years h1 {
+        font-size: 8vw;
+    }
+
+    .years p {
+        font-size: 4vw;
+    }
+
+    .form input {
+        width: 100%;
+        font-size: 3vw;
+    }
+}
+.cases.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
 }
