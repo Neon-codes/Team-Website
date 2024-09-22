@@ -12,8 +12,9 @@ html, body {
 }
 
 body {
+    width:100%;
     background: #111;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .nav-inner {
